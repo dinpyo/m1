@@ -61,7 +61,6 @@
 	<h1>강사 리스트</h1>
 	<table class="table">
 		<tr class="table-info">
-			<th>강사번호</th>
 			<th>강사아이디</th>
 			<th>강사이름</th>	
 			<th>담당과목</th>
@@ -70,10 +69,21 @@
 			for(HashMap<String, Object> t : list){
 		%>
 			<tr>
-				<td><%=(Integer)(t.get("강사번호"))%></td>
-				<td><%=(String)(t.get("강사아이디"))%></td>
-				<td><%=(String)(t.get("강사이름"))%></td>
-				<td><%=(String)(t.get("담당과목"))%></td>
+				<td>
+					<a href="<%=request.getContextPath()%>/teacher/teacherOne.jsp?teacherNo=<%=(Integer)(t.get("강사번호"))%>">
+						<%=(String)(t.get("강사아이디"))%>
+					</a>
+				</td>
+				<td>
+					<a href="<%=request.getContextPath()%>/teacher/teacherOne.jsp?teacherNo=<%=(Integer)(t.get("강사번호"))%>">
+						<%=(String)(t.get("강사이름"))%>
+					</a>	
+				</td>
+				<td>
+					<a href="<%=request.getContextPath()%>/teacher/teacherOne.jsp?teacherNo=<%=(Integer)(t.get("강사번호"))%>">
+						<%=(String)(t.get("담당과목"))%>
+					</a>	
+				</td>
 			</tr>
 		<%
 			}
@@ -122,5 +132,7 @@
 		}
 	%>		
 	</div>
+	
+	<a href="<%=request.getContextPath()%>/teacher/insertTeacher.jsp">강사 추가</a>
 </body>
 </html>

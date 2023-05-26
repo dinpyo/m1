@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import = "dao.*" %>
-
 <%@ page import = "vo.*" %>
-<%@ page import = "java.util.*" %>
+
 <%
 	request.setCharacterEncoding("utf-8");
 
@@ -28,7 +27,7 @@
 	SubjectDao subjectDao = new SubjectDao();
 	int row = subjectDao.updateSubject(subject);
 	
-	if(row==1){
+	if(row == 1){
 		System.out.println("subject수정 성공");
 		response.sendRedirect(request.getContextPath()+"/subject/subjectList.jsp");
 		return;

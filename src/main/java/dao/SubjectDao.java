@@ -48,7 +48,7 @@ public class SubjectDao {
 		int row = 0;
 		DBUtil dbUtil = new DBUtil();
 		Connection conn = dbUtil.getConnection();
-		String sql ="DELETE FROM subject where subject_no = ?";
+		String sql ="DELETE FROM subject WHERE subject_no = ?";
 		PreparedStatement stmt = conn.prepareStatement(sql);
 		stmt.setInt(1, subjectNo);
 		row = stmt.executeUpdate();			
@@ -89,7 +89,7 @@ public class SubjectDao {
 		return subject;
 	}
 	
-	// 6) 과목전체row 
+	// 6) 과목전체
 	public int selectSubjectCnt() throws Exception {
 		int row = 0;
 		DBUtil dbUtil = new DBUtil();

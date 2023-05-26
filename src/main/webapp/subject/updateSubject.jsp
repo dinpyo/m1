@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import = "dao.*" %>
-
 <%@ page import = "vo.*" %>
-<%@ page import = "java.util.*" %>
+
 <%
 	if(request.getParameter("subjectNo")==null
 	||request.getParameter("subjectNo").equals("")){
@@ -21,7 +20,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>과목 상세 및 수정페이지</h1>
+	<h1>과목 수정</h1>
 	<form action="<%=request.getContextPath()%>/subject/updateSubjectAction.jsp" method="post">
 		<table class="table">
 			<tr>
@@ -38,11 +37,11 @@
 				
 			</tr>
 			<tr>
-				<td>최초 작성 시간</td>
+				<td>생성일</td>
 				<td><input type ="text" name="createdate" readonly="readonly" value="<%=subject.getCreatedate()%>"></td>
 			</tr>
 			<tr>
-				<td>마지막 수정 시간</td>
+				<td>수정일</td>
 				<td><input type ="text" name="updatedate" readonly="readonly" value="<%=subject.getUpdatedate()%>"></td>
 			</tr>
 			<tr>

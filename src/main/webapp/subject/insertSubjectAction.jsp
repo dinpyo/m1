@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <%@ page import="dao.*"%>
 <%@ page import="vo.*"%>
 
@@ -27,13 +26,13 @@
 	SubjectDao subjectDao = new SubjectDao();
 	int row = subjectDao.insertSubject(subject);
 	
-	if(row==1){
-		System.out.println("subject추가 성공");
-		response.sendRedirect(request.getContextPath()+"/subject/subjectList.jsp");	
+	if(row == 1){
+		System.out.println("subject 추가 성공");
+		response.sendRedirect(request.getContextPath()+"/subject/subjectList.jsp");
+		return;
 	}else{
-		System.out.println("subject추가 실패");
+		System.out.println("subject 추가 실패");
 		response.sendRedirect(request.getContextPath()+"/subject/insertSubject.jsp");
-	
+		return;
 	}
 %>
-
