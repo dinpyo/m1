@@ -3,6 +3,9 @@
 <%@ page import = "vo.*"%>
 
 <%
+	// 한글 깨짐 방지 코드
+	request.setCharacterEncoding("utf-8");
+	
 	if(request.getParameter("subjectNo")==null
 	||request.getParameter("subjectNo").equals("")){
 		response.sendRedirect(request.getContextPath()+"/subject/subjectList.jsp");

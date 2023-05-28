@@ -3,6 +3,7 @@
 <%@ page import="vo.*"%>
 
 <%
+	//한글 깨짐 방지 코드
 	request.setCharacterEncoding("utf-8");
 	
 	if(request.getParameter("subjectName") == null 

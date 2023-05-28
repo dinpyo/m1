@@ -3,6 +3,9 @@
 <%@ page import = "vo.*"%>
 
 <%
+	//한글 깨짐 방지 코드
+	request.setCharacterEncoding("utf-8");
+
 	if(request.getParameter("teacherNo")==null
 	||request.getParameter("teacherNo").equals("")){
 		response.sendRedirect(request.getContextPath()+"/teacher/teacherList.jsp");
