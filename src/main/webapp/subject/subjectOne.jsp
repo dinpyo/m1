@@ -31,7 +31,7 @@
 			<button type="button">목록으로</button>
 		</a>
 	<form action="<%=request.getContextPath()%>/subject/updateSubject.jsp" method="post">
-		<table>
+		<table class="table">
 			<tr>
 				<th>과목번호</th>
 				<td>

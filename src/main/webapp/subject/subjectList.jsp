@@ -58,7 +58,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-	<table>
+	<table class="table">
 		<tr>
 			<th>과목이름</th>
 			<th>과목시간</th>

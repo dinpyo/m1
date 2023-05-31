@@ -10,7 +10,7 @@
 <body>
 	<h1>강사 추가</h1>
 	<form action="<%=request.getContextPath()%>/teacher/insertTeacherAction.jsp" method="post">
-		<table>
+		<table class="table">
 			<tr>
 				<th>추가할 강사 아이디 : </th>
 				<td><input type="text" name="teacherId"></td>

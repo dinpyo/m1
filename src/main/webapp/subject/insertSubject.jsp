@@ -10,7 +10,7 @@
 <body>
 	<h1>과목 추가</h1>
 	<form action="<%=request.getContextPath()%>/subject/insertSubjectAction.jsp" method="post">
-		<table>
+		<table class="table">
 			<tr>
 				<th>추가할 과목 이름 : </th>
 				<td><input type="text" name="subjectName"></td>
